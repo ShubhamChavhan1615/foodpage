@@ -502,3 +502,96 @@ label {
 .item2:hover {
     box-shadow: 10px 25px 30px rgba(30, 30, 200, 0.3);
 }
+
+.menu {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.menu-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item1, .item2 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px); /* Two items per row on desktop */
+    max-width: calc(50% - 20px);
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.item1 img, .item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item1d, .item2d {
+    padding: 10px;
+}
+
+.item1d h1, .item2d h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.item1d p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.item1d h1 del {
+    color: #888;
+}
+
+.item1d button, .item2d button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item1d button:hover, .item2d button:hover {
+    background-color: #0056b3;
+}
+
+/* Desktop Styles */
+@media(min-width: 768px) {
+    .menu-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+    .item1, .item2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .item1d h1, .item2d h1 {
+        font-size: 1em;
+    }
+    
+    .item1d p {
+        font-size: 0.8em;
+    }
+    
+    .item1d button, .item2d button {
+        width: 100%;
+        font-size: 1em;
+    }
+}
